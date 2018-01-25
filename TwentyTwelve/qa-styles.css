@@ -118,8 +118,9 @@ p {margin-top:0;}
 h1 {font-size:22px; margin:22px 0; font-weight: inherit;}
 h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
-.qa-favoriting {float:right; padding-right:48px; padding-top:4px;}
+.qa-favoriting {float:right; padding-top:4px; padding-left: 10px;}
 
+.qa-favorite-button {vertical-align: top;}
 .qa-favorite-button,.qa-favorite-hover,.qa-unfavorite-button,.qa-unfavorite-hover {background:url(favorite-plus.gif) no-repeat; border:0; height:26px; width:26px;}
 	.qa-favorite-button {background-position: 0 -26px;}
 	.qa-favorite-hover,.qa-favorite-button:hover {background-position: 0 0px;}
@@ -249,7 +250,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
 /* Standard form (wide version) */
 
-.qa-form-wide-table {border:1px solid #658296; background-color:#d9e3ea;}
+/* .qa-form-wide-table {border:1px solid #658296; background-color:#d9e3ea;} */
 .qa-form-wide-spacer {background:#E3F4FF; line-height:1px; padding:0; font-size:1px;}
 .qa-form-wide-ok {color:#090; font-size:16px; padding:6px; text-align:center;}
 .qa-form-wide-label {color:#253845; padding:6px 10px; font-size:13px; font-weight:bold; white-space: nowrap;}
@@ -422,7 +423,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 	.qa-a-list-item-hidden .qa-user-link {color:#999;}
 
 .qa-a-item-main {float:left; width:600px; display:inline-block;} /* inline-block for IE */
-.qa-a-item-selected {background-color:#bbd151; border:1px dashed #486a63; padding:10px; overflow:hidden; zoom:1;} /* zoom for IE */
+.qa-a-item-selected {background-color:#bbd151; padding:20px; overflow:hidden; zoom:1;} /* zoom for IE */
 .qa-a-item-content {font-size:16px; margin-bottom:12px;}
 .qa-a-item-avatar {display:inline-block; vertical-align:middle; margin-right:8px;}
 .qa-a-item-meta {display:inline-block; vertical-align:middle; font-size:13px;}
