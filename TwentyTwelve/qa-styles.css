@@ -3,7 +3,7 @@
 
 	http://www.question2answer.org/
 
-	
+
 	File: qa-theme/Classic/qa-styles.css
 	Version: See define()s at top of qa-include/qa-base.php
 	Description: CSS file for included Classic theme
@@ -13,7 +13,7 @@
 	modify it under the terms of the GNU General Public License
 	as published by the Free Software Foundation; either version 2
 	of the License, or (at your option) any later version.
-	
+
 	This program is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -23,13 +23,13 @@
 */
 
 /*
-	Theme URI: 
+	Theme URI:
 	Theme Version: 1.0.1
 	Theme Date: 2012-12-24
 	Theme Author: QA-Themes
 	Theme Author URI: http://www.QA-Themes.com/
 	Theme License: GPLv2
-	Theme Update Check URI: 
+	Theme Update Check URI:
 */
 /*
 	This Theme is designed by QA-themes based on Twenty Twelve Theme by wordpress
@@ -45,7 +45,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {line-height: 1.5;}
 ol,ul {list-style: none;}
-blockquote,q {quotes: none;}
+blockquote,q {quotes: none;margin: 1em 1em 1em 2em;border-left: 3px #ccc solid;padding-left: 1em;}
 blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}h1,h2,h3,h4,h5,h6 {clear: both;}
 html {overflow-y: scroll;font-size: 100%;margin-top: 28px !important;overflow-y: scroll;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
 a:focus {
@@ -278,8 +278,8 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
 /* Question list */
 
-.qa-q-list-item {margin-bottom:30px; padding-bottom:25px; zoom:1;border-bottom: 1px solid #EDEDED;} /* zoom for IE, padding for early FF */
-.qa-q-item-main {}
+.qa-q-list-item {margin-bottom:30px; padding-bottom:25px; zoom:1;border-bottom: 1px solid #EDEDED;display:flex;} /* zoom for IE, padding for early FF */
+.qa-q-item-main {flex-grow:1;}
 .qa-q-item-title {color:#235272; font-weight:bold; font-size:16px;}
 .qa-q-item-title a {color: #21759B;font-family: "Open Sans",Helvetica,Arial,sans-serif;font-size: 18px !important;font-weight: normal;line-height: 1.2;}
 .qa-q-item-title a:hover {color:#0F3647;text-decoration: none;}
@@ -296,6 +296,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 .qa-q-item-tag-list {list-style:none; margin:0; padding:0;}
 .qa-q-item-tag-item {display:inline;}
 .qa-q-item-buttons {text-align:right; clear:both;}
+.qa-q-item-stats {flex-wrap:nowrap;display:flex;}
 
 .qa-suggest-next {font-size:14px; padding:0.5em 0; text-align:center; clear:both;}
 	.qa-suggest-next a {background: none repeat scroll 0 0 #EEEEEE;border-radius: 5px 5px 5px 5px;color: #686868;padding: 3px 6px;}
@@ -305,8 +306,10 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
 /* qa-*-hover classes are substituted by JS (for IE), qa-*-button:hover is a backup for other browsers if JS is off */
 
-.qa-voting {margin-right:5px; float:left; height:50px; overflow:hidden; padding:10px 10px;}
-.qa-vote-buttons {float:left; width:18px; padding-right:10px;}
+form {vertical-align:top;}
+
+.qa-voting {margin-right:5px; padding:0 10px;display:flex;}
+.qa-vote-buttons {text-align:center;padding-right:10px;display:flex;flex-direction:column;margin:auto;}
 .qa-q-list-item .qa-vote-buttons {display:none;}
 
 .qa-vote-one-button {margin:12px 0;}
@@ -321,7 +324,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 	.qa-vote-down-button {background-position:-17px 0; color:#009fe3;}
 	.qa-vote-down-disabled {background-position:-17px -60px; color:#009fe3;}
 	.qa-vote-down-hover,.qa-vote-down-button:hover {background-position:-17px -15px; color:#31c1ff;}
-	
+
 .qa-voted-up-button,.qa-voted-up-hover {background:url(vote-buttons.gif) no-repeat; border:0; font-size:1px; height:15px; width:17px;}
 	.qa-voted-up-button {background-position:0 -30px; color:#f3cb7f;}
 	.qa-voted-up-hover,.qa-voted-up-button:hover {background-position:0 -45px; color:#f3cb7f;}
@@ -343,13 +346,11 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 /* Answers and views count */
 
 .qa-a-count {
-  text-align:center; 
-  width:auto; 
-  height:50px; 
-  overflow:hidden; 
-  float:left; 
-  padding:10px 5px; 
-  margin-right:16px;}
+  text-align:center;
+  width:auto;
+  padding:0 5px;
+  margin-right:16px;
+}
 .qa-a-count-data {font-size:24px; font-weight:bold; display:block;}
 .qa-a-count-pad {font-size:11px;}
 
@@ -383,7 +384,8 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
 /* Question view */
 
-.qa-q-view-main {float:left; width:600px;margin-left:10px;}
+.qa-q-view.question {display: flex;}
+.qa-q-view-main {margin-left:10px;flex-grow:1;}
 .qa-q-view-content {font-size:16.5px; margin-bottom:16px;}
 .qa-q-view-avatar {display:inline-block; vertical-align:middle; margin-right:8px;}
 .qa-q-view-meta {display:inline-block; vertical-align:middle; font-size:13px;}
@@ -403,7 +405,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 .qa-q-view-c-list {clear:both; margin:24px 0 0 24px; border-top:1px dotted #666;}
 
 .qa-q-view-hidden {}
-	.qa-q-view-hidden .qa-voting {background:#fff; border:1px solid #ccc; color:#ccc;}
+	.qa-q-view-hidden .qa-voting {background:#fff; border:2px solid #ccc; color:#ccc;}
 	.qa-q-view-hidden .qa-q-view-content {color:#999;}
 	.qa-q-view-hidden .qa-q-view-meta {color:#ccc;}
 	.qa-q-view-hidden .qa-user-link {color:#999;}
@@ -413,7 +415,7 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 
 /* Answer view  */
 
-.qa-a-list-item {margin-bottom:40px; zoom:1; padding-bottom:1px;} /* zoom for IE, padding for early FF */
+.qa-a-list-item {margin-bottom:40px; zoom:1; padding-bottom:1px;display:flex;} /* zoom for IE, padding for early FF */
 .qa-a-list-item-hidden {}
 	.qa-a-list-item-hidden .qa-voting {background:#FFF; border:1px solid #ccc; color:#ccc;}
 	.qa-a-list-item-hidden .qa-a-item-content {color:#999;}
@@ -422,8 +424,8 @@ h2 {font-size:16px; padding: 4px 0 6px; clear:both;}
 	.qa-a-list-item-hidden .qa-a-item-who-title {color:#999;}
 	.qa-a-list-item-hidden .qa-user-link {color:#999;}
 
-.qa-a-item-main {float:left; width:600px; display:inline-block;} /* inline-block for IE */
-.qa-a-item-selected {background-color:#bbd151; padding:20px; overflow:hidden; zoom:1;} /* zoom for IE */
+.qa-a-item-main {flex-grow:1;margin-left:10px;}
+.qa-a-item-selected {padding:20px; overflow:hidden; zoom:1;} /* zoom for IE */
 .qa-a-item-content {font-size:16px; margin-bottom:12px;}
 .qa-a-item-avatar {display:inline-block; vertical-align:middle; margin-right:8px;}
 .qa-a-item-meta {display:inline-block; vertical-align:middle; font-size:13px;}
