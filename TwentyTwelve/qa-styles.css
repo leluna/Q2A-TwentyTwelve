@@ -491,13 +491,13 @@ form {vertical-align:top;}
 .qa-nav-footer-link {color:#686868; text-decoration:underline !important;}
 	.qa-nav-footer-link:hover {color:#21759B;}
 .qa-attribution {float:right;}
-	.qa-attribution a {color:#686868; text-decoration:underline; !important;}
+	.qa-attribution a {color:#686868; text-decoration:underline !important;}
 	.qa-attribution a:hover {color:#21759B;}
 
 /* Classes in HTML passed to theme class */
 
 .qa-user-link {color:#757575;}
-.qa-category-link {color:#757575; text-decoration:underlinef !important;}
+.qa-category-link {color:#757575; text-decoration:underline !important;}
 .qa-tag-link {font-size: 14px; background-color: #EEEEEE;color: #666666 !important; padding:3px 5px; margin-bottom:3px; display:-moz-inline-stack; display:inline-block; vertical-align:middle; text-decoration:none !important;} /* inline-block for IE, -moz-inline-stack for early FF */
 	.qa-tag-link:hover {background-color: #DDDDDD;color: #000000;text-decoration: none;}
 .qa-avatar-image {border:0; vertical-align:middle;}
